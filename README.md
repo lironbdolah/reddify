@@ -28,19 +28,20 @@ Reddify Creates a Spotify playlist, based on the top posts of a specific music g
 
 ## User guide:
 
-**In order to create your playlist, you first need to get authorization from Reddit and Spotify (tokens).**
+In order to create your playlist, you first need to get authorization from Reddit and Spotify (tokens).
 
-** To get the Spotify token, create an app in [Spotify for developers dashboard](https://developer.spotify.com/dashboard/applications), and retrive your:
+1. To get the Spotify token, create an app in [Spotify for developers dashboard](https://developer.spotify.com/dashboard/applications), and retrive your:
  - client id 
  - secret id 
  - set up a redirect URL 
 
-** To get the Spotify token, create an app in [Reddit prefernces](https://www.reddit.com/prefs/apps/), and retrive your:
+2. To get the Spotify token, create an app in [Reddit prefernces](https://www.reddit.com/prefs/apps/), and retrive your:
 - client id 
 - client_secret
 - user agent
-  
-* Now, we are ready to use reddify.
+
+
+Now, we are ready to use reddify.
 Download the repository and run: ```shell main.py ```
 
 Enter your information into the GUI:
