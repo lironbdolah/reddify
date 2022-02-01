@@ -6,14 +6,14 @@ import json
 import requests
 
 
-def reddit_tracks(client_id,client_secret,user_agent,range,limit):
+def reddit_tracks(client_id,client_secret,user_agent,range,limit,subreddit):
     # log in
     reddit = praw.Reddit(client_id=client_id,
                          client_secret=client_secret,
                          user_agent=user_agent)
 
     # get top songs from reddit:
-    hot_posts = reddit.subreddit('Metal').top(range, limit=limit)
+    hot_posts = reddit.subreddit(subreddit).top(range, limit=limit)
     songs = {}
     for post in hot_posts:
         if len(songs)<limit:

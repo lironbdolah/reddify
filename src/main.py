@@ -15,11 +15,11 @@ if __name__ == '__main__':
     # set size
     root.geometry("775x450")
     root.resizable(width=False, height=False)
-    root.iconbitmap("assets/icon.ico")
+    root.iconbitmap("C:/Users/bdola/OneDrive/Documents/Github/spottied/assets/icon.ico")
 
 
     # Display image on a Label widget.
-    img = ImageTk.PhotoImage(Image.open("assets/backround.gif").resize((775, 450), Image.ANTIALIAS))
+    img = ImageTk.PhotoImage(Image.open("C:/Users/bdola/OneDrive/Documents/Github/spottied/assets/backround.gif").resize((775, 450), Image.ANTIALIAS))
     lbl = Label(root, image=img)
     lbl.img = img  # Keep a reference in case this code put is in a function.
     lbl.place(relx=0.5, rely=0.5, anchor='center')  # Place label in center of parent.
@@ -40,6 +40,7 @@ if __name__ == '__main__':
         inputs['reddit secret id'] = reddit_secret_id_textbox.get("1.0", "end-1c")
         inputs['playlist name'] = playlist_name_textbox.get("1.0", "end-1c")
         inputs['number of tracks'] = number_of_tracks_textbox.get("1.0", "end-1c")
+        inputs['subreddit name'] = subreddit_name_textbox.get("1.0", "end-1c")
         inputs['date_range'] = var.get()
 
 
@@ -55,7 +56,7 @@ if __name__ == '__main__':
 
         try:
             songs = reddit_tracks(inputs['reddit client id'],inputs['reddit secret id'],
-                                  inputs['user agent'],inputs['date_range'],int(inputs['number of tracks']))
+                                  inputs['user agent'],inputs['date_range'],int(inputs['number of tracks']),inputs['subreddit name'])
         except:
             messagebox.showinfo('Input Error', "something went wrong with your reddit credentials")
         try:
@@ -101,8 +102,10 @@ if __name__ == '__main__':
     playlist_filters.config(font=("arial", 12))
     playlist_name = Label(root, text = "playlist_name:",bg='#3b3b3b', fg='white')
     playlist_name_textbox = Text(root, height = 1, width = 25)
+    subreddit_name = Label(root, text="   subreddit_name:", bg='#3b3b3b', fg='white')
+    subreddit_name_textbox = Text(root, height=1, width=25)
     number_of_tracks = Label(root, text = "Number_of_tracks:",bg='#3b3b3b', fg='white')
-    number_of_tracks_textbox = Text(root, height = 1, width = 10)
+    number_of_tracks_textbox = Text(root, height = 1, width = 8)
     date_range = Label(root, text = "Date_range:",bg='#3b3b3b', fg='white')
 
     # menubar:
@@ -144,9 +147,11 @@ if __name__ == '__main__':
     playlist_name_textbox.grid(row=8, column=1,padx=15)
     number_of_tracks.grid(row=8, column=2,pady=10)
     number_of_tracks_textbox.grid(row=8, column=3)
-    date_range.grid(row=8, column=4,pady=15)
-    omenu.grid(row=8, column=5,pady=15)
-    b.grid(row=9, column=2,pady=15)
+    subreddit_name.grid(row=9, column=0, pady=10)
+    subreddit_name_textbox.grid(row=9, column=1)
+    date_range.grid(row=9, column=2,pady=15)
+    omenu.grid(row=9, column=3,pady=15)
+    b.grid(row=10, column=2,pady=15)
 
 
     root.mainloop()
