@@ -8,6 +8,7 @@
  <img alt="last commit" src=https://img.shields.io/github/last-commit/lironbdolah/reddify>
 </p>
 
+
 Reddify Creates a Spotify playlist, based on the top posts of a specific music genre subreddit, Based on [Spotipy](https://spotipy.readthedocs.io/en/2.19.0/) and [Praw](https://praw.readthedocs.io/en/stable/).
 
 
