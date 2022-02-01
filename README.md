@@ -36,5 +36,5 @@ To get the Spotify token
 This repository comes with an eazy to use gui script:
 
 <p align="center">
-  <img src="assets/gui.png" />
+  <img src="assets/gui.png" width="350>
 </p>
