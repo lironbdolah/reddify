@@ -44,7 +44,7 @@ In order to create your playlist, you first need to get authorization from Reddi
  - secret id 
  - set up a redirect URL 
 
-2. To get the Spotify token, create an app in [Reddit prefernces](https://www.reddit.com/prefs/apps/), and retrive your:
+2. To get the Reddit token, create an app in [Reddit prefernces](https://www.reddit.com/prefs/apps/), and retrive your:
 - client id 
 - client_secret
 - user agent
