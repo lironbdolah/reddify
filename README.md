@@ -51,7 +51,7 @@ In order to create your playlist, you first need to get authorization from Reddi
 
 
 Now, we are ready to use reddify.
-Download the repository and run: ```shell main.py ```
+Download the repository and run: ```main.py ```
 
 Enter your information into the GUI:
 <p align="center">
