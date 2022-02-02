@@ -21,10 +21,10 @@ Reddify Creates a Spotify playlist, based on the top posts of a specific music g
 
 **Playlist filters options:**
 
-- **Playlist name** : The name you choose for your playlist.
+- **Playlist name**: The name you choose for your playlist.
 - **Subreddit name**: The name of the subreddit which you want to extract your posts from
-- **Number of tracks** : the number of track you would like to have in your playlist
-- **Date range**: sorts reddit top posts by a specific date range: (past day, past week, .... all time).
+- **Number of tracks**: The number of tracks you would like to have in your playlist
+- **Date range**: Sorts Reddit top posts by a specific date range: (past day, past week, .... all time).
 
 
 
@@ -39,14 +39,14 @@ Reddify Creates a Spotify playlist, based on the top posts of a specific music g
 
 In order to create your playlist, you first need to get authorization from Reddit and Spotify (tokens).
 
-1. To get the Spotify token, create an app in [Spotify for developers dashboard](https://developer.spotify.com/dashboard/applications), and retrive your:
- - client id 
- - secret id 
+1. To get the Spotify token, create an app in [Spotify for developers dashboard](https://developer.spotify.com/dashboard/applications), and retreve your:
+ - client-id 
+ - secret-id 
  - set up a redirect URL 
 
-2. To get the Reddit token, create an app in [Reddit prefernces](https://www.reddit.com/prefs/apps/), and retrive your:
-- client id 
-- client_secret
+2. To get the Reddit token, create an app in [Reddit prefernces](https://www.reddit.com/prefs/apps/), and retreve your:
+- client-id 
+- client secret
 - user agent
 
 
@@ -58,6 +58,6 @@ Enter your information into the GUI:
   <img src="assets/gui.png"/>
 </p>
 
-Thats it!
+That's it!
 
 if you filled up your information correctly, your playlist should appear on Spotify.
