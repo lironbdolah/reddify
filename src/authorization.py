@@ -13,18 +13,18 @@ def reddit_tracks(client_id,client_secret,user_agent,range,limit,subreddit):
                          user_agent=user_agent)
 
     # get top songs from reddit:
-    hot_posts = reddit.subreddit(subreddit).top(range, limit=limit)
+    hot_posts = reddit.subreddit(subreddit).top(range, limit=limit + 500)
     songs = {}
     for post in hot_posts:
-        if len(songs)<limit:
+        if len(songs) < limit:
             title = post.title
             if '{' in post.title or '[' in post.title or '(' in post.title:
                 title = re.sub('[\(\[].*?[\)\]]', "", title)
 
             if ' - ' in title and len(title) <= 50:
                 name = title.split('-')
-                song = re.sub('[^A-Za-z0-9]+', ' ',name[1])
-                artist = re.sub('[^A-Za-z0-9]+', ' ',  name[0])
+                song = re.sub('[^A-Za-z0-9]+', ' ', name[1])
+                artist = re.sub('[^A-Za-z0-9]+', ' ', name[0])
 
                 # add artist and song to dict
                 songs[artist] = song
