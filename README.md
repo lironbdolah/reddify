@@ -32,6 +32,7 @@ Reddify Creates a Spotify playlist, based on the top posts of a specific music g
 
 - spotipy
 - praw
+- PIL
 - tkinter 
 
 
