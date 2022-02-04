@@ -15,11 +15,11 @@ if __name__ == '__main__':
     # set size
     root.geometry("775x450")
     root.resizable(width=False, height=False)
-    root.iconbitmap("C:/Users/bdola/OneDrive/Documents/Github/spottied/assets/icon.ico")
+    root.iconbitmap("assets/icon.ico")
 
 
     # Display image on a Label widget.
-    img = ImageTk.PhotoImage(Image.open("C:/Users/bdola/OneDrive/Documents/Github/spottied/assets/backround.gif").resize((775, 450), Image.ANTIALIAS))
+    img = ImageTk.PhotoImage(Image.open("assets/backround.gif").resize((775, 450), Image.ANTIALIAS))
     lbl = Label(root, image=img)
     lbl.img = img  # Keep a reference in case this code put is in a function.
     lbl.place(relx=0.5, rely=0.5, anchor='center')  # Place label in center of parent.

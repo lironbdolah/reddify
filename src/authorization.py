@@ -56,7 +56,7 @@ def create_playlist(name, token, username):
             return 0
 
     # create playlist
-    endpoint_url = f"https://api.spotify.com/v1/users/exploderx95/playlists"
+    endpoint_url = f"https://api.spotify.com/v1/users/"+username+"/playlists"
     request_body = json.dumps({
         "name": name,
         "public": True
@@ -86,11 +86,4 @@ def add_tracks(playlist_id,songs,token,username):
 
 
 
-
-if __name__ ==  '__main__':
-    username = 'exploderx95'
-    songs = reddit_tracks('year',15)
-    token = get_spotify_token(username)
-    playlist_id = create_playlist('best_yearly', token, username)
-    add_tracks(playlist_id,songs,token)
 
