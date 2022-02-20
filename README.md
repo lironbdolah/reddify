@@ -52,7 +52,7 @@ Download the repository and run: ```main.py ```
 
 Enter your information into the GUI:
 <p align="center">
-  <img src="assets/gui.png"/>
+  <img src="assets/gui.png" width="350"/>
 </p>
 
 That's it!
