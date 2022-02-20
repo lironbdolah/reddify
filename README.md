@@ -9,7 +9,7 @@
 </p>
 
 
-Reddify Creates a Spotify playlist, based on the top posts of a specific music genre subreddit, Using [Spotipy](https://spotipy.readthedocs.io/en/2.19.0/) and [Praw](https://praw.readthedocs.io/en/stable/). 
+Reddify Creates a Spotify playlist, based on the top posts of a specific music genre subreddit, Using [Spotipy](https://spotipy.readthedocs.io/en/2.19.0/).
 
 
 **Features:**
@@ -24,31 +24,27 @@ Reddify Creates a Spotify playlist, based on the top posts of a specific music g
 - **Playlist name**: The name you choose for your playlist.
 - **Subreddit name**: The name of the subreddit which you want to extract your posts from
 - **Number of tracks**: The number of tracks you would like to have in your playlist
-- **Date range**: Sorts Reddit top posts by a specific date range (past day, past week, .... all time).
+- **Date range**: Sorts Reddit posts by a specific date range (past day, past week, .... all time).
+- **Category**: Sorts Reddit posts by new/hot/top posts.
 
 
 
 ## Requierments:
 
 - spotipy
-- praw
 - PIL
 - tkinter 
 
 
 ## User guide:
 
-In order to create your playlist, you first need to get authorization from Reddit and Spotify (tokens).
+In order to create your playlist, you first need to get authorization from Spotify (token).
 
-1. To get the Spotify token, create an app in [Spotify for developers dashboard](https://developer.spotify.com/dashboard/applications), and retreve your:
+To get the Spotify token, create an app in [Spotify for developers dashboard](https://developer.spotify.com/dashboard/applications), and retreve your:
+
  - client-id 
  - secret-id 
  - set up a redirect URL 
-
-2. To get the Reddit token, create an app in [Reddit prefernces](https://www.reddit.com/prefs/apps/), and retreve your:
-- client-id 
-- client secret
-- user agent
 
 
 Now, we are ready to use reddify.
