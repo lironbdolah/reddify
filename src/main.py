@@ -28,7 +28,7 @@ if __name__ == '__main__':
 
 
     def save_data():
-        text_file = open("assets/data.txt", "w")
+        text_file = open("assets/reddify_data.txt", "w")
         text_file.writelines([username_textbox.get("1.0", "end-1c") + '\n',
                               redirect_uri_textbox.get("1.0", "end-1c") + '\n',
                               client_id_textbox.get("1.0", "end-1c") + '\n',
@@ -40,10 +40,11 @@ if __name__ == '__main__':
 
         text_file.close()
 
+        messagebox.showinfo('Message', "Data Saved")
 
     def load_data():
         try:
-            text_file = open("assets/data.txt", "r")
+            text_file = open("assets/reddify_data.txt", "r")
             content = text_file.readlines()
 
             username_textbox.insert("end-1c", content[0])
