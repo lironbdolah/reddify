@@ -66,10 +66,10 @@ if __name__ == '__main__':
         inputs = {}
 
         # recive inputs:
-        inputs['user name'] = 'exploderx95'
-        inputs['redirect uri'] = 'http://localhost:8888/callback'
-        inputs['client id'] = '1610ed9ebbbc4becada9451b3b3c73f2'
-        inputs['secret id'] = '17b72dfcb93044b1ab72d039da6e6e00'
+        inputs['user name'] = username_textbox.get("1.0", "end-1c")
+        inputs['redirect uri'] = redirect_uri_textbox.get("1.0", "end-1c")
+        inputs['client id'] = client_id_textbox.get("1.0", "end-1c")
+        inputs['secret id'] = secret_id_textbox.get("1.0", "end-1c")
 
         inputs['playlist name'] = playlist_name_textbox.get("1.0", "end-1c")
         inputs['number of tracks'] = number_of_tracks_textbox.get("1.0", "end-1c")
