@@ -30,10 +30,9 @@ if __name__ == '__main__':
     def save_data():
         text_file = open("assets/reddify_data.txt", "w")
         text_file.writelines([username_textbox.get("1.0", "end-1c") + '\n',
-                              redirect_uri_textbox.get("1.0", "end-1c") + '\n',
+                              redirect_url_textbox.get("1.0", "end-1c") + '\n',
                               client_id_textbox.get("1.0", "end-1c") + '\n',
                               secret_id_textbox.get("1.0", "end-1c") + '\n',
-
                               playlist_name_textbox.get("1.0", "end-1c") + '\n',
                               number_of_tracks_textbox.get("1.0", "end-1c") + '\n',
                               subreddit_name_textbox.get("1.0", "end-1c") + '\n'])
@@ -48,7 +47,7 @@ if __name__ == '__main__':
             content = text_file.readlines()
 
             username_textbox.insert("end-1c", content[0])
-            redirect_uri_textbox.insert("end-1c", content[1])
+            redirect_url_textbox.insert("end-1c", content[1])
             client_id_textbox.insert("end-1c", content[2])
             secret_id_textbox.insert("end-1c", content[3])
 
@@ -67,7 +66,7 @@ if __name__ == '__main__':
 
         # recive inputs:
         inputs['user name'] = username_textbox.get("1.0", "end-1c")
-        inputs['redirect uri'] = redirect_uri_textbox.get("1.0", "end-1c")
+        inputs['redirect url'] = redirect_url_textbox.get("1.0", "end-1c")
         inputs['client id'] = client_id_textbox.get("1.0", "end-1c")
         inputs['secret id'] = secret_id_textbox.get("1.0", "end-1c")
 
@@ -89,7 +88,7 @@ if __name__ == '__main__':
 
         try:
             token = get_spotify_token(inputs['user name'], inputs['client id'], inputs['secret id'],
-                                      inputs['redirect uri'])
+                                      inputs['redirect url'])
         except:
             messagebox.showinfo('Input Error', "something went wrong with your spotify credentials")
 
@@ -158,8 +157,8 @@ if __name__ == '__main__':
     spotify_header.grid(row=0, column=2, pady=15)
     username.grid(row=2, column=0, pady=10)
     username_textbox.grid(row=2, column=1)
-    redirect_uri.grid(row=2, column=2, pady=10)
-    redirect_uri_textbox.grid(row=2, column=3)
+    redirect_url.grid(row=2, column=2, pady=10)
+    redirect_url_textbox.grid(row=2, column=3)
     client_id.grid(row=3, column=0, pady=10)
     client_id_textbox.grid(row=3, column=1)
     secret_id.grid(row=3, column=2, pady=20)
