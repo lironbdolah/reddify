@@ -12,7 +12,7 @@ def add_tracks(username,subreddit,category,limit,date_range,token,playlist_id):
 
     # get url
     try:
-        URL = f'https://www.reddit.com/r/{subreddit}/{category}.json?limit={limit+500}&t={date_range}'
+        URL = f'https://www.reddit.com/r/{subreddit}/{category}.json?limit={str(1000)}&t={date_range}'
         request = requests.get(URL, headers={'User-agent': 'agent'})
     except:
         print('Subreddit not Found')
