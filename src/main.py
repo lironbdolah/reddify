@@ -97,7 +97,7 @@ if __name__ == '__main__':
         if playlist_id == 0:
             messagebox.showinfo('Input Error', "Playlist already exists")
 
-        add_tracks(inputs['user name'], inputs['subreddit name'], inputs['category'], int(inputs['number of tracks']),
+        process(inputs['user name'], inputs['subreddit name'], inputs['category'], int(inputs['number of tracks']),
                    inputs['date_range'], token, playlist_id)
 
         messagebox.showinfo('Messege:', "Playlist Created!")
