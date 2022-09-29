@@ -72,7 +72,7 @@ if __name__ == '__main__':
 
         inputs['playlist name'] = playlist_name_textbox.get("1.0", "end-1c")
         inputs['number of tracks'] = number_of_tracks_textbox.get("1.0", "end-1c")
-        inputs['subreddit name'] = 'Metal'
+        inputs['subreddit name'] = subreddit_name_textbox.get("1.0", "end-1c")
         inputs['date_range'] = var.get()
         inputs['category'] = cat.get()
 
