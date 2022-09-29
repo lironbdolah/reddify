@@ -31,10 +31,13 @@ def add_tracks(username,subreddit,category,limit,date_range,token,playlist_id):
             if '{' in title or '[' in title or '(' in title:
                 title = re.sub('[\(\[].*?[\)\]]', "", title)
 
+            if '|' in title:
+                title = title.split('|', 1)[0]
+
             if ' - ' in title and len(title) <= 50:
-                name = title.split('-')
-                song = re.sub('[^A-Za-z0-9]+', ' ',name[1])
-                artist = re.sub('[^A-Za-z0-9]+', ' ',  name[0])
+                name = title.split(' - ')
+                song = re.sub('\W+', ' ', name[1])
+                artist = re.sub('\W+', ' ', name[0])
 
                 # try to add track to the playlist
                 track_ids = sp.search(q='artist:' + artist + ' track:' + song, type='track', limit=1)
@@ -46,7 +49,7 @@ def add_tracks(username,subreddit,category,limit,date_range,token,playlist_id):
                     tracks_ids.append(item['id'])
                     songs += 1
                 except:
-                    print('the song: ' + artist + "- " + song + "    was not found in spotify")
+                    print('the song: ' + artist + " - " + song + " was not found on spotify")
                     continue
 
 
