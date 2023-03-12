@@ -14,7 +14,7 @@ Reddify Creates a Spotify playlist, based on the top posts of a specific music g
 
 **Features:**
 
-- Eazy to use GUI
+- Easy to use GUI
 - Generates a playlist based on your personal preferences.
 - Multiple playlist filters.
 
