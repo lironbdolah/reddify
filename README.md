@@ -22,7 +22,7 @@ Reddify Creates a Spotify playlist, based on the top posts of a specific music g
 **Playlist filters options:**
 
 - **Playlist name**: The name you choose for your playlist.
-- **Subreddit name**: The name of the subreddit which you want to extract your posts from
+- **Subreddit name**: The name of the subreddit which you want to extract your posts from (You Can Select Multiple Subreddits : "subreddit_1,subreddit_2 ..)
 - **Number of tracks**: The number of tracks you would like to have in your playlist
 - **Date range**: Sorts Reddit posts by a specific date range (past day, past week, .... all time).
 - **Category**: Sorts Reddit posts by new/hot/top posts.
